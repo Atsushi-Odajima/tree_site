@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- @include head-common -->
+    <title>【制作見本】写真相談・見積もり受付（デモ）｜草刈り・草取り・伐採「緑整」</title>
+    <meta name="description" content="架空の草刈り・草取り・伐採業者「緑整」の写真相談・見積もり受付フォームのデモです。送信・見積もり・作業予約は行われません。" />
+    <meta property="og:title" content="【制作見本】写真相談・見積もり受付（デモ）｜草刈り・草取り・伐採「緑整」" />
+    <meta property="og:description" content="架空事業者のホームページ制作見本。写真相談フォームの操作体験デモです。" />
+    <script type="module" src="/src/pages/estimate.ts"></script>
+  </head>
+  <body class="page-estimate">
+    <!-- @include header -->
+    <main id="main" class="estimate">
+      <div class="container container--form">
+        <nav class="breadcrumb" aria-label="現在地"><a href="/">トップ</a><span aria-hidden="true">›</span><span aria-current="page">写真相談・見積もり受付</span></nav>
+        <h1 class="page-title">写真相談・見積もり受付<span class="page-title__demo">デモ</span></h1>
+        <p class="page-lead">作業の予約ではなく、相談の受付です。内容を確認してから、作業範囲と費用をご連絡します（という想定のデモです）。</p>
+
+        <div class="notice demo-warning" role="note">
+          <span data-icon="triangle-alert"></span>
+          <div>
+            <p><strong>操作体験用です。事業者への送信・実際の見積もり・作業予約は行われません。実際の個人情報は入力しないでください。</strong></p>
+            <p class="demo-warning__sub">入力した内容は、このブラウザ内にだけ保存されます（管理画面のデモで確認できます）。</p>
+          </div>
+        </div>
+
+        <div data-estimate-app>
+          <noscript><p class="notice notice--error">このフォームのデモには JavaScript が必要です。</p></noscript>
+        </div>
+      </div>
+    </main>
+    <!-- @include footer -->
+  </body>
+</html>

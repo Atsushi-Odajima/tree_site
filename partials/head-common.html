@@ -1,0 +1,33 @@
+    <meta charset="UTF-8" />
+    <script>
+      /* JS有効時だけスマホのメニューを折りたたむ。開閉はこの小さな処理だけで動く（他のJSが失敗しても使える） */
+      document.documentElement.classList.add('js');
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest && e.target.closest('[data-menu-toggle]');
+        var nav = document.getElementById('site-nav');
+        if (!nav) return;
+        if (btn) {
+          var open = btn.getAttribute('aria-expanded') !== 'true';
+          btn.setAttribute('aria-expanded', String(open));
+          nav.classList.toggle('is-open', open);
+          btn.lastElementChild.textContent = open ? '閉じる' : 'メニュー';
+        } else if (e.target.closest && e.target.closest('#site-nav a')) {
+          var b = document.querySelector('[data-menu-toggle]');
+          b.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+          b.lastElementChild.textContent = 'メニュー';
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        var b = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+        if (e.key === 'Escape' && b) { b.click(); b.focus(); }
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#20533B" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="【制作見本】草刈り・草取り・伐採「緑整」" />
+    <meta property="og:image" content="/images/hero-brushcutter-crew-960.webp" />
+    <meta property="og:locale" content="ja_JP" />

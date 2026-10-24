@@ -1,0 +1,422 @@
+[
+ {
+  "name": "トップ本文に対象外業務・禁止表現がない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "抜根は「行わない」文脈でのみ記載",
+  "ok": true,
+  "detail": "抜根の出現 2 回"
+ },
+ {
+  "name": "noindex を設定",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "LocalBusiness 構造化データなし",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "タイトルに制作見本を明記",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "「#」だけのリンク・tel: リンクがない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "スマホではメニューを折りたたむ",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "メニューボタンで開く",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "Esc でメニューを閉じる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "スマホ(390×844)の最初の画面に相談ボタンが入る",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "困りごと02を選ぶと草取りの説明が選択状態",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "選択した作業が費用ツールにも反映",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "選択後のフォーカスがサービス見出しへ移動",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "入力中は固定アクションバーを隠す",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "草刈り100㎡・ひざ〜腰で概算表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "坪に切り替えると換算表示（30.3坪）",
+  "ok": true,
+  "detail": "30.3"
+ },
+ {
+  "name": "単位を繰り返し切り替えても結果が同じ",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "㎡に戻すと元の 100",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "追加作業は個別見積もり欄に分け、金額に加算しない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "処分費は別途と表示（総額に見せない）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "面積が分からない → 0円にせず写真確認後",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "伐採は金額を出さない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "伐採では面積・草の高さの入力を表示しない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "「この内容で見積もり相談へ」で概算と条件がフォームへ引き継がれる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "主な作業が引き継がれる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "追加作業（草取り・処分）が引き継がれる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "入力前にデモ注意文を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "必須未入力で次へ進めない（場所の種類）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "手順2で面積が引き継がれている",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "未対応形式に案内を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "5MB超に案内を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "合計5枚を超えると追加しない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "5枚に達するとデモ写真の未選択分は選べない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "写真を削除できる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "過去日はエラー",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "休業日（10〜4月の日曜）はエラー",
+  "ok": true,
+  "detail": "2026-10-25"
+ },
+ {
+  "name": "同じ日を重複して選べない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "確認画面に希望日（確定ではない）を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "確認画面に概算を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "二重クリックでも1件だけ登録",
+  "ok": true,
+  "detail": "0→1"
+ },
+ {
+  "name": "完了画面に受付番号・希望日・「作業日・料金は確定していません」",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "利用者の写真の本体・ファイル名を保存しない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "デモ写真は素材IDで保存・利用者写真は枚数のみ",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "希望日と確定日を別に保存（確定日は空）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "保存キーはすべて ryokusei-demo: 接頭辞",
+  "ok": true,
+  "detail": "ryokusei-demo:seeded,ryokusei-demo:inquiries,ryokusei-demo:seq"
+ },
+ {
+  "name": "保存に失敗したら完了扱いにしない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "再試行で受付できる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "作業名が分からないを初期選択",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "作業名・面積・エリアが分からなくても受付できる（375px）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "/estimate を直接開いて再読み込みできる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "/admin を直接開いて再読み込みできる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "パスワードを画面に表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "パスワード違いはエラー",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "初回サンプル4件＋受付した相談1件が一覧に表示",
+  "ok": true,
+  "detail": "5件"
+ },
+ {
+  "name": "同じブラウザ内だけの保存である旨を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "管理画面でデモ写真を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "利用者の写真は「デモでは写真を保存していません」と表示（すり替えない）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "作業日確定は日付入力が必須",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "希望日が確定日に自動で入らない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "確定日を保存し、希望日は変わらない",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "カレンダーに確定作業日を表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "希望日は別の一覧で確認できる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "デモ初期化はこのサイトのデータだけ削除",
+  "ok": true,
+  "detail": "{\"other\":\"1\",\"n\":4}"
+ },
+ {
+  "name": "スマホの管理画面はカード表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "375px / に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "375px /estimate に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "375px /admin に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "390px / に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "390px /estimate に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "390px /admin に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "768px / に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "768px /estimate に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "768px /admin に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "1440px / に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "1440px /estimate に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "1440px /admin に横スクロールが出ない",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "PCの敷地図からも選択できる",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "文字サイズ200%でも横スクロールが出ない（トップ）",
+  "ok": true,
+  "detail": "0px"
+ },
+ {
+  "name": "文字サイズ200%でも横スクロールが出ない（フォーム）",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "Tab 1回目でスキップリンクにフォーカス",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "キーボード操作で次の手順へ進み、見出しにフォーカス",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "reduced-motion では表示演出を無効化",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "JavaScript 無効でも本文・サービス説明・相談ボタンを表示",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "ページエラー・コンソールエラーなし",
+  "ok": true,
+  "detail": ""
+ }
+]
