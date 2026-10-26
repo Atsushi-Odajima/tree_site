@@ -12,7 +12,7 @@
       property="og:description"
       content="架空の事業者によるホームページ制作見本。困りごとから選ぶ相談入口、費用の目安、写真相談フォーム、案件管理のデモ付き。"
     />
-    <link rel="preload" as="image" href="/images/hero-brushcutter-crew-480.webp" imagesrcset="/images/hero-brushcutter-crew-480.webp 480w, /images/hero-brushcutter-crew-960.webp 960w" imagesizes="(min-width: 768px) 46vw, 100vw" />
+    <link rel="preload" as="image" href="/images/hero-brushcutter-crew-960.webp" imagesrcset="/images/hero-brushcutter-crew-480.webp 480w, /images/hero-brushcutter-crew-960.webp 960w, /images/hero-brushcutter-crew-1024.webp 1024w" imagesizes="(min-width: 1024px) 1280px, 100vw" />
     <script type="module" src="/src/pages/top.ts"></script>
   </head>
   <body class="page-top">
@@ -20,52 +20,57 @@
     <main id="main">
       <!-- 1. ヒーロー -->
       <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero__grid">
-          <p class="hero__works" aria-label="対応する作業">
-            <span>草刈り</span><span>草取り</span><span>伐採</span>
-          </p>
-          <h1 id="hero-title" class="hero__title">
-            <span class="nb">草が伸びた。</span><br />
-            <span class="nb">木をどうにかしたい。</span><br />
-            <span class="nb">その困ったを、</span><span class="nb">ご相談ください。</span>
-          </h1>
-          <figure class="hero__photo">
-            <img
-              src="/images/hero-brushcutter-crew-960.webp"
-              srcset="/images/hero-brushcutter-crew-480.webp 480w, /images/hero-brushcutter-crew-960.webp 960w"
-              sizes="(min-width: 768px) 46vw, 100vw"
-              width="960"
-              height="640"
-              alt="ヘルメットと手袋を着けた作業者が、斜面の草を刈払機で刈っている様子"
-              fetchpriority="high"
-            />
-            <figcaption>作業のイメージ（素材写真）</figcaption>
-          </figure>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
-            <a class="btn" href="#estimate-tool"><span data-icon="calculator"></span>費用の目安を見る</a>
-          </div>
-          <div class="hero__info">
-            <p class="hero__lead">伸びた草も、気になる木も。まずは写真でご相談。<br />作業名が分からなくても、遠方にお住まいでも相談できます。</p>
-            <ul class="hero__facts">
-              <li><span data-icon="clock"></span>8:00〜18:00／日曜休み（5〜9月は日曜も相談対応）</li>
-              <li><span data-icon="map-pin"></span>〇〇市・△△町・□□村（エリア外は要相談）</li>
+        <div class="hero__frame">
+          <img
+            class="hero__img"
+            src="/images/hero-brushcutter-crew-960.webp"
+            srcset="/images/hero-brushcutter-crew-480.webp 480w, /images/hero-brushcutter-crew-960.webp 960w, /images/hero-brushcutter-crew-1024.webp 1024w"
+            sizes="(min-width: 1024px) 1280px, 100vw"
+            width="1024"
+            height="683"
+            alt="ヘルメットと手袋を着けた作業者が、斜面の草を刈払機で刈っている様子"
+            fetchpriority="high"
+          />
+          <div class="hero__inner">
+            <p class="hero__eyebrow">〇〇市・△△町・□□村の<span class="nb">草刈り・草取り・伐採</span></p>
+            <h1 id="hero-title" class="hero__title">
+              <span class="nb">草が伸びた。</span><br />
+              <span class="nb">木をどうにかしたい。</span><br />
+              <span class="nb">その困ったを、</span><span class="nb">ご相談ください。</span>
+            </h1>
+            <p class="hero__lead">伸びた草も、気になる木も。まずは写真でご相談。</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
+              <a class="btn btn--light" href="#estimate-tool"><span data-icon="calculator"></span>費用の目安を見る</a>
+            </div>
+            <ul class="hero__badges" aria-label="相談のしかた">
+              <li><span data-icon="check"></span>写真で相談できる</li>
+              <li><span data-icon="check"></span>作業名が分からなくてもOK</li>
+              <li><span data-icon="check"></span>立ち会いなしも相談可</li>
             </ul>
           </div>
+          <p class="hero__caption">作業のイメージ（素材写真）</p>
+        </div>
+        <div class="container">
+          <ul class="hero__facts card">
+            <li><span data-icon="clock"></span><span><strong>営業時間</strong>8:00〜18:00</span></li>
+            <li><span data-icon="calendar"></span><span><strong>休業日</strong>日曜（5〜9月は相談対応）</span></li>
+            <li><span data-icon="map-pin"></span><span><strong>対応エリア</strong>〇〇市・△△町・□□村</span></li>
+          </ul>
         </div>
       </section>
 
       <!-- 2. 困りごとから選ぶ -->
       <section id="trouble" class="section section--sub" aria-labelledby="trouble-title">
-        <div class="container trouble__grid">
-          <div class="trouble__main">
-            <div class="section-head">
-              <p class="section-head__label">困りごとから選ぶ</p>
-              <h2 id="trouble-title">どれに近いですか？</h2>
-              <p>選ぶと、その作業の説明に移動します。作業名が分からなくても、そのまま相談できます。</p>
-            </div>
+        <div class="container">
+          <div class="section-head section-head--center">
+            <p class="section-head__label">困りごとから選ぶ</p>
+            <h2 id="trouble-title">こんなお困りごとはありませんか？</h2>
+            <p>近いものを選ぶと、その作業の説明に移動します。作業名が分からなくても、そのまま相談できます。</p>
+          </div>
+          <div class="trouble__grid">
             <ol class="trouble-list">
-              <li class="trouble-item" data-work-item="kusakari">
+              <li class="trouble-item card" data-work-item="kusakari">
                 <span class="trouble-item__no" aria-hidden="true">01</span>
                 <div class="trouble-item__body">
                   <h3>伸びた草を刈ってほしい</h3>
@@ -75,7 +80,7 @@
                   <a class="btn btn--small btn--primary" href="#service-kusakari" data-select-work="kusakari">01 を選んで説明を見る<span data-icon="chevron-right"></span></a>
                 </div>
               </li>
-              <li class="trouble-item" data-work-item="kusatori">
+              <li class="trouble-item card" data-work-item="kusatori">
                 <span class="trouble-item__no" aria-hidden="true">02</span>
                 <div class="trouble-item__body">
                   <h3>雑草を手作業で取りたい</h3>
@@ -85,7 +90,7 @@
                   <a class="btn btn--small btn--primary" href="#service-kusatori" data-select-work="kusatori">02 を選んで説明を見る<span data-icon="chevron-right"></span></a>
                 </div>
               </li>
-              <li class="trouble-item" data-work-item="bassai">
+              <li class="trouble-item card" data-work-item="bassai">
                 <span class="trouble-item__no" aria-hidden="true">03</span>
                 <div class="trouble-item__body">
                   <h3>木の伐採を相談したい</h3>
@@ -96,64 +101,79 @@
                 </div>
               </li>
             </ol>
-            <p class="trouble__unknown">
-              どれか分からないときは
-              <a href="/estimate?work=unknown">作業名を選ばずに写真で相談する<span data-icon="arrow-right"></span></a>
-            </p>
+
+            <figure class="site-map card" aria-labelledby="site-map-caption">
+              <svg viewBox="0 0 420 330" role="group" aria-label="敷地の簡略図。草地は01草刈り、建物まわりの地面は02草取り、木は03伐採に対応">
+                <rect x="1" y="1" width="418" height="328" rx="10" fill="#fff" stroke="#c9c1b0" stroke-width="2" stroke-dasharray="6 5" />
+                <rect x="1" y="296" width="418" height="33" fill="#ebe7dd" />
+                <text x="14" y="318" font-size="13" fill="#4d554f">道路</text>
+                <rect x="246" y="24" width="150" height="104" rx="4" fill="#f6f4ee" stroke="#4d554f" stroke-width="2" />
+                <text x="321" y="82" font-size="15" text-anchor="middle" fill="#4d554f">建物</text>
+                <a href="#service-kusatori" data-select-work="kusatori" class="site-map__zone" aria-label="02 建物まわりの雑草（草取り）の説明へ">
+                  <path d="M230 14h178v130H230z M246 24v104h150V24z" fill-rule="evenodd" fill="#eae3d3" stroke="#a08a5c" stroke-width="1.5" />
+                  <g fill="#7a9a4a"><path d="M236 140l3-9 3 9z" /><path d="M402 60l3-9 3 9z" /><path d="M300 141l3-9 3 9z" /><path d="M236 40l3-9 3 9z" /></g>
+                  <circle cx="230" cy="150" r="17" fill="#20533b" />
+                  <text x="230" y="156" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">02</text>
+                </a>
+                <a href="#service-kusakari" data-select-work="kusakari" class="site-map__zone" aria-label="01 伸びた草（草刈り）の説明へ">
+                  <rect x="20" y="24" width="196" height="256" rx="4" fill="#dcebc9" stroke="#7a9a4a" stroke-width="1.5" />
+                  <g stroke="#5f8a3a" stroke-width="2" stroke-linecap="round">
+                    <path d="M50 90v-18M56 90l4-16M44 90l-4-14" /><path d="M120 150v-18M126 150l4-16M114 150l-4-14" />
+                    <path d="M70 220v-18M76 220l4-16M64 220l-4-14" /><path d="M170 100v-18M176 100l4-16M164 100l-4-14" />
+                    <path d="M160 240v-18M166 240l4-16M154 240l-4-14" />
+                  </g>
+                  <circle cx="44" cy="48" r="17" fill="#20533b" />
+                  <text x="44" y="54" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">01</text>
+                </a>
+                <a href="#service-bassai" data-select-work="bassai" class="site-map__zone" aria-label="03 敷地内の木（伐採）の説明へ">
+                  <rect x="292" y="232" width="14" height="46" fill="#7b5a3a" />
+                  <circle cx="299" cy="210" r="44" fill="#5f8a3a" stroke="#20533b" stroke-width="2" />
+                  <circle cx="352" cy="186" r="17" fill="#20533b" />
+                  <text x="352" y="192" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">03</text>
+                </a>
+              </svg>
+              <figcaption id="site-map-caption" class="note">説明用の簡略図です（写真ではありません）。図の番号を押しても、左の文字ボタンと同じ説明に移動します。</figcaption>
+            </figure>
           </div>
 
-          <figure class="site-map" aria-labelledby="site-map-caption">
-            <svg viewBox="0 0 420 330" role="group" aria-label="敷地の簡略図。草地は01草刈り、建物まわりの地面は02草取り、木は03伐採に対応">
-              <rect x="1" y="1" width="418" height="328" rx="8" fill="#fff" stroke="#b9c4bc" stroke-width="2" stroke-dasharray="6 5" />
-              <!-- 道路 -->
-              <rect x="1" y="296" width="418" height="33" fill="#e4e8e5" />
-              <text x="14" y="318" font-size="13" fill="#4d554f">道路</text>
-              <!-- 建物 -->
-              <rect x="246" y="24" width="150" height="104" rx="4" fill="#f5f7f5" stroke="#4d554f" stroke-width="2" />
-              <text x="321" y="82" font-size="15" text-anchor="middle" fill="#4d554f">建物</text>
-              <!-- 02 建物まわりの地面 -->
-              <a href="#service-kusatori" data-select-work="kusatori" class="site-map__zone" aria-label="02 建物まわりの雑草（草取り）の説明へ">
-                <path d="M230 14h178v130H230z M246 24v104h150V24z" fill-rule="evenodd" fill="#eae3d3" stroke="#a08a5c" stroke-width="1.5" />
-                <g fill="#7a9a4a">
-                  <path d="M236 140l3-9 3 9z" /><path d="M402 60l3-9 3 9z" /><path d="M300 141l3-9 3 9z" /><path d="M236 40l3-9 3 9z" />
-                </g>
-                <circle cx="230" cy="150" r="17" fill="#20533b" />
-                <text x="230" y="156" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">02</text>
-              </a>
-              <!-- 01 草地 -->
-              <a href="#service-kusakari" data-select-work="kusakari" class="site-map__zone" aria-label="01 伸びた草（草刈り）の説明へ">
-                <rect x="20" y="24" width="196" height="256" rx="4" fill="#dcebc9" stroke="#7a9a4a" stroke-width="1.5" />
-                <g stroke="#5f8a3a" stroke-width="2" stroke-linecap="round">
-                  <path d="M50 90v-18M56 90l4-16M44 90l-4-14" /><path d="M120 150v-18M126 150l4-16M114 150l-4-14" />
-                  <path d="M70 220v-18M76 220l4-16M64 220l-4-14" /><path d="M170 100v-18M176 100l4-16M164 100l-4-14" />
-                  <path d="M160 240v-18M166 240l4-16M154 240l-4-14" />
-                </g>
-                <circle cx="44" cy="48" r="17" fill="#20533b" />
-                <text x="44" y="54" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">01</text>
-              </a>
-              <!-- 03 木 -->
-              <a href="#service-bassai" data-select-work="bassai" class="site-map__zone" aria-label="03 敷地内の木（伐採）の説明へ">
-                <rect x="292" y="232" width="14" height="46" fill="#7b5a3a" />
-                <circle cx="299" cy="210" r="44" fill="#5f8a3a" stroke="#20533b" stroke-width="2" />
-                <circle cx="352" cy="186" r="17" fill="#20533b" />
-                <text x="352" y="192" font-size="15" font-weight="700" text-anchor="middle" fill="#fff">03</text>
-              </a>
-            </svg>
-            <figcaption id="site-map-caption" class="note">説明用の簡略図です（写真ではありません）。図の番号を押しても、左の文字ボタンと同じ説明に移動します。</figcaption>
-          </figure>
+          <h3 class="worries__title">こんな方も、まずはご相談ください</h3>
+          <ul class="worries">
+            <li class="worry card">
+              <span class="worry__icon"><span data-icon="circle-help"></span></span>
+              <div><h4>作業名が分からない</h4><p>写真と困りごとを送っていただければ、草刈り・草取り・伐採のどれが合うかご提案します。</p></div>
+            </li>
+            <li class="worry card">
+              <span class="worry__icon"><span data-icon="house"></span></span>
+              <div><h4>遠方に住んでいて立ち会えない</h4><p>作業範囲を写真で決め、作業前後の様子を写真でお知らせする方法を相談できます。</p></div>
+            </li>
+            <li class="worry card">
+              <span class="worry__icon"><span data-icon="calculator"></span></span>
+              <div><h4>費用の目安が分からない</h4><p>草刈り・草取りは、面積と草の高さを選ぶだけで目安が分かります。</p></div>
+            </li>
+            <li class="worry card">
+              <span class="worry__icon"><span data-icon="trash-2"></span></span>
+              <div><h4>刈った草や枝の処分も気になる</h4><p>敷地内にまとめるか、処分を相談するかを事前に決めます。処分は量を見て別途お見積もりします。</p></div>
+            </li>
+          </ul>
+          <p class="trouble__unknown">
+            どれか分からないときは
+            <a href="/estimate?work=unknown">作業名を選ばずに写真で相談する<span data-icon="arrow-right"></span></a>
+          </p>
+          <!-- @include cta -->
         </div>
       </section>
 
       <!-- 3. サービス説明 -->
       <section id="services" class="section" aria-labelledby="services-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">作業内容</p>
-            <h2 id="services-title">草刈り・草取り・伐採の3つを行っています</h2>
-            <p>それぞれの作業で「できること」「含まれないこと」「費用が変わる理由」をまとめました。</p>
+            <h2 id="services-title">草刈り・草取り・伐採。<br class="sp-only" />敷地のお手入れを3つの作業で</h2>
+            <p>それぞれの作業でできること、含まれないこと、費用が変わる理由をまとめました。</p>
           </div>
+          <ul class="svc-cards" data-service-cards></ul>
 
-          <div class="compare" aria-labelledby="compare-title">
+          <div class="compare card" aria-labelledby="compare-title">
             <h3 id="compare-title" class="compare__title">草刈りと草取りは、どう違う？</h3>
             <div class="compare__table" role="table" aria-label="草刈りと草取りの違い">
               <div role="row" class="compare__row compare__row--head">
@@ -181,67 +201,44 @@
           </div>
 
           <div class="services" data-services></div>
+          <!-- @include cta -->
         </div>
       </section>
 
       <!-- 4. 相談プラン例 -->
       <section id="cases" class="section section--sub" aria-labelledby="cases-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">相談プラン例</p>
             <h2 id="cases-title">こんなご相談を想定しています</h2>
             <p class="cases__disclaimer"><span data-icon="info"></span><span>以下は<strong>架空の相談例</strong>です。実際に受注した施工事例ではありません。</span></p>
           </div>
           <ol class="cases">
-            <li class="case">
-              <h3 class="case__title"><span class="case__no">例1</span>遠方に住んでいて、実家の敷地の草が気になる</h3>
+            <li class="case card">
+              <p class="case__tag">架空の相談例 1</p>
+              <h3 class="case__title">遠方に住んでいて、実家の敷地の草が気になる</h3>
               <div class="case__flow">
-                <div class="case__step">
-                  <p class="case__label">困りごと</p>
-                  <p>実家が空き家になり、夏に草が腰の高さまで伸びた。近所に迷惑をかけていないか心配だが、すぐには行けない。</p>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">確認すること</p>
-                  <ul><li>敷地の広さと草の高さ（写真）</li><li>立ち会いの有無と鍵・出入り口</li><li>刈った草を置く場所・処分の希望</li></ul>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">想定する作業</p>
-                  <p>草刈り。立ち会いなしの場合は、作業前後の様子を写真で報告する方法を相談します。</p>
-                </div>
+                <div class="case__step"><p class="case__label">困りごと</p><p>実家が空き家になり、夏に草が腰の高さまで伸びた。近所に迷惑をかけていないか心配だが、すぐには行けない。</p></div>
+                <div class="case__step"><p class="case__label">確認すること</p><ul><li>敷地の広さと草の高さ（写真）</li><li>立ち会いの有無と鍵・出入り口</li><li>刈った草を置く場所・処分の希望</li></ul></div>
+                <div class="case__step"><p class="case__label">想定する作業</p><p>草刈り。立ち会いなしの場合は、作業前後の様子を写真で報告する方法を相談します。</p></div>
               </div>
             </li>
-            <li class="case">
-              <h3 class="case__title"><span class="case__no">例2</span>家のまわりの雑草を、手作業で取ってほしい</h3>
+            <li class="case card">
+              <p class="case__tag">架空の相談例 2</p>
+              <h3 class="case__title">家のまわりの雑草を、手作業で取ってほしい</h3>
               <div class="case__flow">
-                <div class="case__step">
-                  <p class="case__label">困りごと</p>
-                  <p>建物の横の通路と、砂利の駐車スペースに雑草が増えた。機械の音は控えたい。</p>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">確認すること</p>
-                  <ul><li>草が生えている範囲と地面の種類</li><li>残したい植物の有無</li><li>抜いた草をまとめる場所</li></ul>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">想定する作業</p>
-                  <p>草取り（手作業）。抜いた草は袋にまとめ、処分を希望される場合は別途お見積もりします。</p>
-                </div>
+                <div class="case__step"><p class="case__label">困りごと</p><p>建物の横の通路と、砂利の駐車スペースに雑草が増えた。機械の音は控えたい。</p></div>
+                <div class="case__step"><p class="case__label">確認すること</p><ul><li>草が生えている範囲と地面の種類</li><li>残したい植物の有無</li><li>抜いた草をまとめる場所</li></ul></div>
+                <div class="case__step"><p class="case__label">想定する作業</p><p>草取り（手作業）。抜いた草は袋にまとめ、処分を希望される場合は別途お見積もりします。</p></div>
               </div>
             </li>
-            <li class="case">
-              <h3 class="case__title"><span class="case__no">例3</span>敷地内の木を伐採して、枝も片付けたい</h3>
+            <li class="case card">
+              <p class="case__tag">架空の相談例 3</p>
+              <h3 class="case__title">敷地内の木を伐採して、枝も片付けたい</h3>
               <div class="case__flow">
-                <div class="case__step">
-                  <p class="case__label">困りごと</p>
-                  <p>庭の木が大きくなり、枝が隣の敷地に出ている。切ったあとの枝や幹の片付けも相談したい。</p>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">確認すること</p>
-                  <ul><li>木の高さ・幹の太さ・本数</li><li>建物・道路・電線・隣家との距離</li><li>枝や幹の片付け・処分の希望</li></ul>
-                </div>
-                <div class="case__step">
-                  <p class="case__label">想定する作業</p>
-                  <p>写真と現地確認のうえで、対応できるか・作業方法・費用をお伝えします。根や切り株の撤去（抜根）は行いません。</p>
-                </div>
+                <div class="case__step"><p class="case__label">困りごと</p><p>庭の木が大きくなり、枝が隣の敷地に出ている。切ったあとの枝や幹の片付けも相談したい。</p></div>
+                <div class="case__step"><p class="case__label">確認すること</p><ul><li>木の高さ・幹の太さ・本数</li><li>建物・道路・電線・隣家との距離</li><li>枝や幹の片付け・処分の希望</li></ul></div>
+                <div class="case__step"><p class="case__label">想定する作業</p><p>写真と現地確認のうえで、対応できるか・作業方法・費用をお伝えします。根や切り株の撤去（抜根）は行いません。</p></div>
               </div>
             </li>
           </ol>
@@ -251,33 +248,97 @@
       <!-- 5. 料金の考え方と費用目安 -->
       <section id="price" class="section" aria-labelledby="price-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">料金の考え方</p>
             <h2 id="price-title">費用は「作業・広さ・状態」で決まります</h2>
             <p>下の料金はすべて<strong>架空の見本</strong>です（税込）。正式な金額は、写真や現地で状態を確認してからお伝えします。</p>
           </div>
 
-          <div class="price__grid">
-            <ol class="price-points">
-              <li><span class="price-points__no">1</span><div><h3>主な作業と広さ</h3><p>草刈り・草取りは、おおよその面積をもとに計算します。</p></div></li>
-              <li><span class="price-points__no">2</span><div><h3>草の高さ・場所の状態</h3><p>背の高い草、傾斜、物が多い場所は時間がかかるため加算します。</p></div></li>
-              <li><span class="price-points__no">3</span><div><h3>1回の最低作業料金</h3><p>狭い場所でも、移動と準備があるため最低料金があります。</p></div></li>
-              <li><span class="price-points__no">4</span><div><h3>処分・エリア外は別途</h3><p>草や枝の処分・運搬、エリア外への出張は、量や場所を確認して別にお見積もりします。</p></div></li>
-            </ol>
+          <ul class="promise">
+            <li><span data-icon="shield-check"></span><div><h3>作業の前に費用を確認</h3><p>作業範囲と金額を決めてから作業します。</p></div></li>
+            <li><span data-icon="shield-check"></span><div><h3>追加の作業は先に相談</h3><p>現地で追加が必要と分かったら、進める前にご相談します。</p></div></li>
+            <li><span data-icon="shield-check"></span><div><h3>写真で概算が分かる</h3><p>草刈り・草取りは写真と広さでおおよその金額をお伝えします。</p></div></li>
+          </ul>
 
-            <div class="price-table-wrap">
+          <div class="price-cards">
+            <div class="price-card card">
+              <h3>草刈り・草取り</h3>
+              <p class="price-card__sub">1㎡あたり・税込（架空）</p>
               <table class="price-table">
-                <caption>料金の目安（架空・税込）</caption>
-                <thead>
-                  <tr><th scope="col">作業</th><th scope="col">1㎡あたり</th><th scope="col">最低作業料金</th></tr>
-                </thead>
-                <tbody data-price-rows>
-                  <tr><th scope="row">草刈り</th><td>120〜180円</td><td>8,000円</td></tr>
-                  <tr><th scope="row">草取り</th><td>400〜600円</td><td>10,000円</td></tr>
-                  <tr><th scope="row">伐採</th><td colspan="2">写真・現地確認後にお見積もり</td></tr>
-                </tbody>
+                <caption class="visually-hidden">草刈り・草取り・伐採の料金の目安（架空・税込）</caption>
+                <thead><tr><th scope="col">作業</th><th scope="col">1㎡あたり</th><th scope="col">最低作業料金</th></tr></thead>
+                <tbody data-price-rows></tbody>
               </table>
-              <p class="note">草の高さ：ひざ〜腰は約1.3〜1.4倍、腰より高い場合は約1.6〜1.8倍。傾斜・障害物などは10〜20%加算（架空の条件）。</p>
+              <p class="note">最低作業料金は、移動と準備があるため1回ごとにいただく料金です（架空）。</p>
+            </div>
+            <div class="price-card card">
+              <h3>草の高さ・状況による加算</h3>
+              <p class="price-card__sub">上の単価にかける目安（架空）</p>
+              <table class="price-table">
+                <caption class="visually-hidden">草の高さと状況による加算の目安（架空）</caption>
+                <thead><tr><th scope="col">条件</th><th scope="col">草刈り</th><th scope="col">草取り</th></tr></thead>
+                <tbody data-addon-rows></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="measure card">
+            <h3 class="measure__title">広さと草の高さの目安</h3>
+            <div class="measure__grid">
+              <figure>
+                <svg viewBox="0 0 300 170" role="img" aria-label="広さの目安。1坪は畳およそ2枚分、約3.3平方メートル。駐車スペース1台分は約12〜15平方メートル">
+                  <rect x="20" y="30" width="60" height="110" fill="#eae3d3" stroke="#a08a5c" stroke-width="2" />
+                  <rect x="82" y="30" width="60" height="110" fill="#eae3d3" stroke="#a08a5c" stroke-width="2" />
+                  <text x="81" y="14" font-size="12" text-anchor="middle" fill="#163d2b" font-weight="700">1坪 ≒ 畳2枚</text><text x="81" y="26" font-size="11" text-anchor="middle" fill="#4d554f">（約3.3㎡）</text>
+                  <rect x="170" y="30" width="110" height="110" rx="4" fill="#f6f4ee" stroke="#4d554f" stroke-width="2" stroke-dasharray="5 4" />
+                  <rect x="196" y="50" width="58" height="72" rx="10" fill="#c9d6c9" stroke="#20533b" stroke-width="2" />
+                  <text x="225" y="14" font-size="12" text-anchor="middle" fill="#163d2b" font-weight="700">車1台分</text><text x="225" y="26" font-size="11" text-anchor="middle" fill="#4d554f">≒ 約12〜15㎡</text>
+                  <text x="150" y="162" font-size="12" text-anchor="middle" fill="#4d554f">例）約100㎡ ≒ 約30坪 ≒ 車7〜8台分</text>
+                </svg>
+                <figcaption class="note">面積が分からない場合は「分からない」を選んで、写真で相談できます。</figcaption>
+              </figure>
+              <figure>
+                <svg viewBox="0 0 300 170" role="img" aria-label="草の高さの目安。くるぶしからひざ下は30センチまで、ひざから腰は30から80センチ、腰より高いと80センチ以上">
+                  <line x1="10" y1="150" x2="290" y2="150" stroke="#4d554f" stroke-width="2" />
+                  <g fill="#c9d6c9" stroke="#20533b" stroke-width="1.5">
+                    <circle cx="60" cy="28" r="10" /><rect x="50" y="40" width="20" height="56" rx="8" /><rect x="51" y="94" width="8" height="56" rx="3" /><rect x="61" y="94" width="8" height="56" rx="3" />
+                  </g>
+                  <path d="M95 150v-20M100 150l4-18M90 150l-4-16" stroke="#5f8a3a" stroke-width="3" stroke-linecap="round" />
+                  <path d="M160 150v-55M166 150l6-50M154 150l-6-46" stroke="#5f8a3a" stroke-width="3" stroke-linecap="round" />
+                  <path d="M235 150v-90M242 150l7-84M228 150l-7-80" stroke="#5f8a3a" stroke-width="3" stroke-linecap="round" />
+                  <text x="98" y="168" font-size="11" text-anchor="middle" fill="#163d2b">〜30cm</text>
+                  <text x="160" y="168" font-size="11" text-anchor="middle" fill="#163d2b">30〜80cm</text>
+                  <text x="236" y="168" font-size="11" text-anchor="middle" fill="#163d2b">80cm〜</text>
+                  <text x="98" y="118" font-size="11" text-anchor="middle" fill="#4d554f">ひざ下</text>
+                  <text x="160" y="84" font-size="11" text-anchor="middle" fill="#4d554f">ひざ〜腰</text>
+                  <text x="236" y="50" font-size="11" text-anchor="middle" fill="#4d554f">腰より上</text>
+                </svg>
+                <figcaption class="note">人や物と一緒に写した写真があると、草の高さが伝わりやすくなります。</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="price-cards">
+            <div class="price-card card">
+              <h3>料金の計算例</h3>
+              <div class="calc" data-calc-example></div>
+            </div>
+            <div class="price-card card">
+              <h3>伐採の料金</h3>
+              <p class="price-card__big">写真・現地確認後にお見積もり</p>
+              <p>木の高さ・幹の太さ、建物や電線との距離で作業方法が大きく変わるため、金額は自動で出していません。写真を見て、必要に応じて現地を確認してからお伝えします。</p>
+              <p class="note">根や切り株を掘り起こす作業（抜根）は行っていません。</p>
+            </div>
+          </div>
+
+          <div class="included card">
+            <div>
+              <h3>概算に含まれるもの</h3>
+              <ul class="ok-list"><li>作業費（主な作業1つ分）</li><li>敷地内での集積</li><li>作業後の簡単な清掃</li><li>対応エリア内の出張費</li></ul>
+            </div>
+            <div>
+              <h3>別途確認するもの</h3>
+              <ul class="dot-list"><li>草・枝の処分と運搬</li><li>対応エリア外への出張費</li><li>現地で分かった追加作業（必ず事前に相談します）</li></ul>
             </div>
           </div>
 
@@ -297,117 +358,132 @@
       <!-- 6. 写真相談の方法 -->
       <section id="photo" class="section section--sub" aria-labelledby="photo-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">写真相談の方法</p>
             <h2 id="photo-title">スマホで撮った写真で、まず相談できます</h2>
             <p>現地に行く前に、写真で作業の内容とおおよその費用をお伝えします。上手に撮れなくても大丈夫です。</p>
           </div>
-          <div class="photo-howto">
-            <ol class="shots">
-              <li class="shot reveal">
-                <img src="/images/overgrown-yard-480.webp" width="480" height="360" loading="lazy" alt="住宅の前の敷地一面に、草がひざ丈ほどまで伸びている様子" />
-                <p class="shot__no">1枚目</p>
-                <h3>敷地の全体</h3>
-                <p>少し離れて、作業してほしい範囲が入るように。</p>
-              </li>
-              <li class="shot reveal">
-                <img src="/images/weeds-sidepath-480.webp" width="480" height="640" loading="lazy" alt="住宅の外壁と塀の間の細い通路に、雑草が一面に茂っている様子" />
-                <p class="shot__no">2枚目</p>
-                <h3>草の様子を近くで</h3>
-                <p>草の高さや量が分かるように。建物まわりなど狭い場所も。</p>
-              </li>
-              <li class="shot reveal">
-                <img src="/images/tree-on-site-480.webp" width="480" height="360" loading="lazy" alt="住宅の敷地内に立つ木と、下ろした枝が地面に積まれている様子" />
-                <p class="shot__no">3枚目</p>
-                <h3>木とまわりの様子</h3>
-                <p>伐採の相談は、木の全体と、建物・道路・電線との距離が分かるように。</p>
-              </li>
-            </ol>
-            <p class="note">写真は撮り方の例として掲載している素材写真です。</p>
-            <div class="photo-howto__send">
-              <h3>写真の送り方</h3>
-              <div class="send-ways">
-                <div class="send-way">
-                  <p class="send-way__name"><span data-icon="file-text"></span>相談フォーム</p>
-                  <p>作業内容や希望日と一緒に送れます。最大5枚まで。</p>
-                  <a class="btn btn--primary btn--block" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
-                </div>
-                <div class="send-way">
-                  <p class="send-way__name"><span data-icon="message-circle"></span>LINE</p>
-                  <p>トークで写真を送って、やりとりしながら相談できます。</p>
-                  <button class="btn btn--block" type="button" data-demo-link="line"><span data-icon="message-circle"></span>LINEで相談する（デモ）</button>
-                </div>
-              </div>
-              <p class="note">このデモのフォームでは、写真は送信・保存されません。</p>
+          <ol class="shots">
+            <li class="shot card reveal">
+              <img src="/images/overgrown-yard-480.webp" width="480" height="360" loading="lazy" alt="住宅の前の敷地一面に、草がひざ丈ほどまで伸びている様子" />
+              <p class="shot__no">1枚目</p>
+              <h3>敷地の全体</h3>
+              <p>少し離れて、作業してほしい範囲が入るように。</p>
+            </li>
+            <li class="shot card reveal">
+              <img src="/images/weeds-sidepath-480.webp" width="480" height="640" loading="lazy" alt="住宅の外壁と塀の間の細い通路に、雑草が一面に茂っている様子" />
+              <p class="shot__no">2枚目</p>
+              <h3>草の様子を近くで</h3>
+              <p>草の高さや量が分かるように。建物まわりなど狭い場所も。</p>
+            </li>
+            <li class="shot card reveal">
+              <img src="/images/tree-on-site-480.webp" width="480" height="360" loading="lazy" alt="住宅の敷地内に立つ木と、下ろした枝が地面に積まれている様子" />
+              <p class="shot__no">3枚目</p>
+              <h3>木とまわりの様子</h3>
+              <p>伐採の相談は、木の全体と、建物・道路・電線との距離が分かるように。</p>
+            </li>
+          </ol>
+          <p class="note shots__note">写真は撮り方の例として掲載している素材写真です。</p>
+          <div class="send-ways">
+            <div class="send-way card">
+              <p class="send-way__name"><span data-icon="file-text"></span>相談フォームで送る</p>
+              <p>作業内容や希望日と一緒に送れます。最大5枚まで。</p>
+              <a class="btn btn--primary btn--block" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
+            </div>
+            <div class="send-way card">
+              <p class="send-way__name"><span data-icon="message-circle"></span>LINEで送る</p>
+              <p>トークで写真を送って、やりとりしながら相談できます。</p>
+              <button class="btn btn--block" type="button" data-demo-link="line"><span data-icon="message-circle"></span>LINEで相談する（デモ）</button>
             </div>
           </div>
+          <p class="note shots__note">このデモのフォームでは、写真は送信・保存されません。</p>
         </div>
       </section>
 
       <!-- 7. 流れ -->
       <section id="flow" class="section" aria-labelledby="flow-title">
-        <div class="container">
-          <div class="section-head">
-            <p class="section-head__label">相談から作業完了まで</p>
+        <div class="container container--mid">
+          <div class="section-head section-head--center">
+            <p class="section-head__label">ご相談の流れ</p>
             <h2 id="flow-title">作業の前に、内容と費用を確認します</h2>
+            <p>写真だけで進める「写真見積もり」と、現地で確認する「現地確認」の2つの進め方があります。</p>
           </div>
           <ol class="flow">
-            <li class="flow__step"><span class="flow__no">1</span><div><h3>相談（写真・LINE・電話）</h3><p>困りごとと場所を教えてください。作業名が分からなくても大丈夫です。</p></div></li>
-            <li class="flow__step"><span class="flow__no">2</span><div><h3>相談内容と現地の状態を確認</h3><p>写真で確認し、必要に応じて現地を見に伺います。</p></div></li>
-            <li class="flow__step"><span class="flow__no">3</span><div><h3>作業範囲と費用を事前に確認</h3><p>どこまで作業するか、処分をどうするかを決めて、お見積もりをお伝えします。</p></div></li>
-            <li class="flow__step"><span class="flow__no">4</span><div><h3>作業日を決める</h3><p>ご希望を伺い、天候も見ながら作業日を決めます。</p></div></li>
-            <li class="flow__step"><span class="flow__no">5</span><div><h3>作業</h3><p>作業中に追加の作業が必要と分かった場合は、<strong>先にご相談</strong>してから進めます。</p></div></li>
-            <li class="flow__step"><span class="flow__no">6</span><div><h3>清掃と内容の確認</h3><p>作業後に清掃し、作業内容を一緒に確認します（立ち会いが難しい場合は写真で報告）。</p></div></li>
+            <li class="flow-step card"><p class="flow-step__no">ステップ1</p><h3>ご相談（写真・LINE・電話）</h3><p>困りごとと場所を教えてください。作業名が分からなくても大丈夫です。</p></li>
+            <li class="flow-step card"><p class="flow-step__no">ステップ2</p><h3>相談内容と写真を確認</h3><p>担当者が内容を確認し、作業の進め方をご案内します。</p></li>
+            <li class="flow-branch">
+              <div class="flow-branch__q card">
+                <span data-icon="circle-help"></span>
+                <p class="flow-branch__label">分かれ道</p>
+                <p class="flow-branch__text">伐採のご相談、または写真だけでは状態が分からない場合か？</p>
+              </div>
+              <div class="flow-branch__cols">
+                <div class="flow-branch__col">
+                  <p class="flow-branch__tag"><span class="tag tag--no">いいえ</span>写真見積もり</p>
+                  <div class="flow-step card"><p class="flow-step__no">ステップ3</p><h3>概算のご連絡・作業範囲の確認</h3><p>写真をもとに、作業範囲と費用をお伝えします。</p></div>
+                </div>
+                <div class="flow-branch__col">
+                  <p class="flow-branch__tag"><span class="tag tag--yes">はい</span>現地確認</p>
+                  <div class="flow-step card"><p class="flow-step__no">ステップ3</p><h3>現地確認の日程を調整</h3><p>ご希望の日を伺い、現地を見に伺う日を決めます。</p></div>
+                  <div class="flow-step card"><p class="flow-step__no">ステップ4</p><h3>現地確認・お見積もり</h3><p>木の大きさや周囲の状況を見て、対応できるか・作業方法・費用をお伝えします。</p></div>
+                </div>
+              </div>
+              <p class="flow-branch__merge">どちらも共通</p>
+            </li>
+            <li class="flow-step card"><p class="flow-step__no">ステップ5</p><h3>作業日を決めて作業</h3><p>天候も見ながら作業日を決めます。作業中に追加の作業が必要と分かった場合は、<strong>先にご相談</strong>してから進めます。</p></li>
+            <li class="flow-step card"><p class="flow-step__no">ステップ6</p><h3>清掃と作業内容の確認</h3><p>作業後に清掃し、作業内容を一緒に確認します（立ち会いが難しい場合は写真で報告）。</p></li>
           </ol>
+          <!-- @include cta -->
         </div>
       </section>
 
       <!-- 8. 対応エリア -->
       <section id="area" class="section section--sub" aria-labelledby="area-title">
-        <div class="container area__grid">
-          <div>
-            <div class="section-head">
-              <p class="section-head__label">対応エリア</p>
-              <h2 id="area-title">〇〇市・△△町・□□村に伺います</h2>
-              <p>エリア外の場合も、場所によっては対応できます。まずはご相談ください（出張費は別途お見積もり）。</p>
-            </div>
-            <ul class="area-list" data-area-list>
-              <li><span class="area-list__name">〇〇市</span><span>市内全域</span></li>
-              <li><span class="area-list__name">△△町</span><span>町内全域</span></li>
-              <li><span class="area-list__name">□□村</span><span>一部地域は日程を相談</span></li>
-              <li><span class="area-list__name">上記以外</span><span>要相談</span></li>
+        <div class="container">
+          <div class="section-head section-head--center">
+            <p class="section-head__label">対応エリア</p>
+            <h2 id="area-title">〇〇市・△△町・□□村に伺います</h2>
+            <p>エリア外の場合も、場所によっては対応できます。まずは写真付きでご相談ください。</p>
+          </div>
+          <ul class="chips chips--center"><li class="chip"><span data-icon="map-pin"></span>〇〇市の草刈り・草取り・伐採</li><li class="chip"><span data-icon="map-pin"></span>△△町の草刈り・草取り・伐採</li><li class="chip"><span data-icon="map-pin"></span>□□村の草刈り・草取り・伐採</li></ul>
+          <div class="area__grid">
+            <figure class="area-map card">
+              <svg viewBox="0 0 360 260" role="img" aria-label="架空の案内図。〇〇市を中心に、北東に△△町、南に□□村がある">
+                <path d="M40 40 L200 30 L210 140 L60 160 Z" fill="#dcebc9" stroke="#20533b" stroke-width="2" />
+                <text x="125" y="98" font-size="18" font-weight="700" text-anchor="middle" fill="#163d2b">〇〇市</text>
+                <path d="M210 30 L330 50 L320 150 L215 140 Z" fill="#eef6e4" stroke="#20533b" stroke-width="2" />
+                <text x="268" y="96" font-size="17" font-weight="700" text-anchor="middle" fill="#163d2b">△△町</text>
+                <path d="M60 165 L210 145 L320 155 L300 230 L80 235 Z" fill="#eef6e4" stroke="#20533b" stroke-width="2" />
+                <text x="190" y="200" font-size="17" font-weight="700" text-anchor="middle" fill="#163d2b">□□村</text>
+              </svg>
+              <figcaption class="note">架空の案内図です。実在の地図・地名ではありません。</figcaption>
+            </figure>
+            <ul class="area-cards">
+              <li class="area-card card"><span data-icon="map-pin"></span><div><h3>〇〇市</h3><p>市内全域</p></div></li>
+              <li class="area-card card"><span data-icon="map-pin"></span><div><h3>△△町</h3><p>町内全域</p></div></li>
+              <li class="area-card card"><span data-icon="map-pin"></span><div><h3>□□村</h3><p>一部地域は日程を相談</p></div></li>
+              <li class="area-card card"><span data-icon="map-pin"></span><div><h3>上記以外</h3><p>要相談（出張費は別途お見積もり）</p></div></li>
             </ul>
           </div>
-          <figure class="area-map">
-            <svg viewBox="0 0 360 260" role="img" aria-label="架空の案内図。〇〇市を中心に、北東に△△町、南に□□村がある">
-              <rect width="360" height="260" rx="8" fill="#fff" stroke="#b9c4bc" stroke-width="2" />
-              <path d="M40 40 L200 30 L210 140 L60 160 Z" fill="#dcebc9" stroke="#20533b" stroke-width="2" />
-              <text x="125" y="98" font-size="18" font-weight="700" text-anchor="middle" fill="#163d2b">〇〇市</text>
-              <path d="M210 30 L330 50 L320 150 L215 140 Z" fill="#eef6e4" stroke="#20533b" stroke-width="2" />
-              <text x="268" y="96" font-size="17" font-weight="700" text-anchor="middle" fill="#163d2b">△△町</text>
-              <path d="M60 165 L210 145 L320 155 L300 230 L80 235 Z" fill="#eef6e4" stroke="#20533b" stroke-width="2" />
-              <text x="190" y="200" font-size="17" font-weight="700" text-anchor="middle" fill="#163d2b">□□村</text>
-            </svg>
-            <figcaption class="note">架空の案内図です。実在の地図・地名ではありません。</figcaption>
-          </figure>
+          <!-- @include cta -->
         </div>
       </section>
 
       <!-- 9. 作業前に確認すること -->
       <section id="check" class="section" aria-labelledby="check-title">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">作業前に確認すること</p>
             <h2 id="check-title">当日を安心して迎えるために</h2>
             <p>次のことを、相談や現地確認のときに一緒に確認します。分からないことは空欄のままで構いません。</p>
           </div>
           <ul class="checklist">
-            <li><span data-icon="check"></span><div><h3>作業する範囲</h3><p>敷地の境界や、どこまで作業するか。</p></div></li>
-            <li><span data-icon="check"></span><div><h3>残したい植物や木</h3><p>刈らない・抜かないでほしいものに目印を付けます。</p></div></li>
-            <li><span data-icon="check"></span><div><h3>置いてある物</h3><p>植木鉢・ホース・石など、動かしてよい物かどうか。</p></div></li>
-            <li><span data-icon="check"></span><div><h3>車を停める場所</h3><p>作業車を停められる場所と、出入り口。</p></div></li>
-            <li><span data-icon="check"></span><div><h3>立ち会いの有無</h3><p>難しい場合は、鍵の受け渡しや写真での報告方法を相談します。</p></div></li>
-            <li><span data-icon="check"></span><div><h3>刈った草・切った枝の扱い</h3><p>敷地内にまとめるか、処分を相談するか。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>作業する範囲</h3><p>敷地の境界や、どこまで作業するか。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>残したい植物や木</h3><p>刈らない・抜かないでほしいものに目印を付けます。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>置いてある物</h3><p>植木鉢・ホース・石など、動かしてよい物かどうか。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>車を停める場所</h3><p>作業車を停められる場所と、出入り口。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>立ち会いの有無</h3><p>難しい場合は、鍵の受け渡しや写真での報告方法を相談します。</p></div></li>
+            <li class="card"><span data-icon="check"></span><div><h3>刈った草・切った枝の扱い</h3><p>敷地内にまとめるか、処分を相談するか。</p></div></li>
           </ul>
         </div>
       </section>
@@ -415,7 +491,7 @@
       <!-- 10. よくある質問 -->
       <section id="faq" class="section section--sub" aria-labelledby="faq-title">
         <div class="container container--narrow">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <p class="section-head__label">よくある質問</p>
             <h2 id="faq-title">よくある質問</h2>
           </div>
@@ -453,40 +529,45 @@
               <div class="faq__answer"><p>日曜日は休業日ですが、草が伸びやすい5〜9月は日曜日も相談に対応しています。年末年始（12/30〜1/3）は休業です。</p></div>
             </details>
           </div>
+          <!-- @include cta -->
         </div>
       </section>
 
-      <!-- 11. 事業者情報・問い合わせ -->
-      <section id="contact" class="section" aria-labelledby="contact-title">
-        <div class="container contact__grid">
-          <div>
-            <div class="section-head">
-              <p class="section-head__label">事業者情報・お問い合わせ</p>
-              <h2 id="contact-title">草刈り・草取り・伐採「緑整」</h2>
-            </div>
-            <dl class="info-table">
-              <div><dt>屋号</dt><dd>草刈り・草取り・伐採「緑整（りょくせい）」</dd></div>
-              <div><dt>所在地</dt><dd>〇〇県〇〇市〇〇町0-0-0（ダミー住所）</dd></div>
-              <div><dt>電話</dt><dd>000-0000-0000（ダミー番号）</dd></div>
-              <div><dt>営業時間</dt><dd>8:00〜18:00</dd></div>
-              <div><dt>休業日</dt><dd>日曜日（5〜9月は日曜日も相談対応）・年末年始</dd></div>
-              <div><dt>対応エリア</dt><dd>〇〇市・△△町・□□村（エリア外は要相談）</dd></div>
-              <div><dt>対応する作業</dt><dd>草刈り・草取り・伐採（草や枝の集積・作業後の清掃を含む。処分は要相談）</dd></div>
-            </dl>
+      <!-- 11. 事業者情報・お問い合わせ -->
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <p class="section-head__label">お問い合わせ・ご相談</p>
+            <h2 id="contact-title">まずは写真でご相談ください</h2>
           </div>
-          <div class="contact-box">
-            <h3>ご相談はこちらから</h3>
-            <a class="btn btn--primary btn--block" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
-            <button class="btn btn--block" type="button" data-demo-link="line"><span data-icon="message-circle"></span>LINEで相談する（デモ）</button>
-            <button class="btn btn--plain btn--block" type="button" data-demo-link="phone"><span data-icon="phone"></span>電話する 000-0000-0000（デモ）</button>
-            <p class="note">受付時間 8:00〜18:00。作業中は電話に出られないことがあります。</p>
-            <div class="sub-links">
-              <p class="sub-links__title">ほかのページ（リンクの見本）</p>
-              <ul>
-                <li><button class="text-btn" type="button" data-demo-link="kurashi">くらしのマーケット<span data-icon="external-link"></span></button></li>
-                <li><button class="text-btn" type="button" data-demo-link="instagram">Instagram<span data-icon="external-link"></span></button></li>
-                <li><button class="text-btn" type="button" data-demo-link="x">X<span data-icon="external-link"></span></button></li>
-              </ul>
+          <ul class="chips chips--center"><li class="chip">写真で相談できる</li><li class="chip">8:00〜18:00</li><li class="chip">日曜は5〜9月のみ相談対応</li></ul>
+          <div class="contact__grid">
+            <div class="contact-box card">
+              <h3>ご相談の方法</h3>
+              <a class="btn btn--primary btn--block btn--lg" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
+              <button class="btn btn--block" type="button" data-demo-link="line"><span data-icon="message-circle"></span>LINEで相談する（デモ）</button>
+              <button class="btn btn--plain btn--block" type="button" data-demo-link="phone"><span data-icon="phone"></span>電話する 000-0000-0000（デモ）</button>
+              <p class="note">受付時間 8:00〜18:00。作業中は電話に出られないことがあります。</p>
+              <div class="sub-links">
+                <p class="sub-links__title">ほかのページ（リンクの見本）</p>
+                <ul>
+                  <li><button class="text-btn" type="button" data-demo-link="kurashi">くらしのマーケット<span data-icon="external-link"></span></button></li>
+                  <li><button class="text-btn" type="button" data-demo-link="instagram">Instagram<span data-icon="external-link"></span></button></li>
+                  <li><button class="text-btn" type="button" data-demo-link="x">X<span data-icon="external-link"></span></button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card info-card">
+              <h3>事業者情報</h3>
+              <dl class="info-table">
+                <div><dt>屋号</dt><dd>草刈り・草取り・伐採「緑整（りょくせい）」</dd></div>
+                <div><dt>所在地</dt><dd>〇〇県〇〇市〇〇町0-0-0（ダミー住所）</dd></div>
+                <div><dt>電話</dt><dd>000-0000-0000（ダミー番号）</dd></div>
+                <div><dt>営業時間</dt><dd>8:00〜18:00</dd></div>
+                <div><dt>休業日</dt><dd>日曜日（5〜9月は日曜日も相談対応）・年末年始</dd></div>
+                <div><dt>対応エリア</dt><dd>〇〇市・△△町・□□村（エリア外は要相談）</dd></div>
+                <div><dt>対応する作業</dt><dd>草刈り・草取り・伐採（草や枝の集積・作業後の清掃を含む。処分は要相談）</dd></div>
+              </dl>
             </div>
           </div>
         </div>

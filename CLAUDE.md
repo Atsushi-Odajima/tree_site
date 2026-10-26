@@ -82,8 +82,18 @@
 
 Vite + TypeScript、素のCSS（`src/styles/`、CSS変数で色・余白・文字サイズ）、GSAP/Lenis 不使用。
 `prefers-reduced-motion` 対応。JSが失敗しても本文とリンクは表示される（演出は追加クラスで付与）。
-Cloudflare Pages：build `npm run build`／output `dist`。公開デモは noindex（meta と `public/_headers`）。
+Vercel：build `npm run build`／output `dist`（設定は `vercel.json`）。公開デモは noindex（meta・`vercel.json` の `X-Robots-Tag`・`robots.txt`）。
 ダミーの LocalBusiness 構造化データは出力しない。
+
+## デザイン（参考構成）
+
+ユーザー指定の参考サイト（https://bassai-kurashiya.com/）の**構成・見せ方だけ**を参考にしている。
+文章・写真・ロゴ・電話番号・評価・受賞歴・口コミ・施工事例（ビフォー・アフター）はコピーしない。
+取り入れたもの：写真を大きく使ったヒーロー、生成り色の背景と角丸カード、丸い緑ボタン、
+各セクション末尾の相談ボタン＋電話（`partials/cta.html`）、お悩みカード、写真付きサービスカード、
+安心ポイントの帯・料金表カード・「広さと草の高さの目安」図・計算例、分岐つきの流れ、カード型FAQ、4列フッター。
+参考サイトにあって入れないもの：口コミ評価・受賞・実績件数・Googleの声・施工事例スライダー・抜根／枝落としのサービス・
+「当日追加料金なし」のような条件なしの断定。
 
 ## 写真
 

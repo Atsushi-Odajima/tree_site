@@ -6,7 +6,7 @@
 - 写真は架空事業者「緑整」の施工実績ではありません（サイト上でも「素材写真」「作業のイメージ」と表記）。
 - ビフォー・アフター写真は使用していません（同じ現場の作業前後で掲載条件を確認できる素材がないため）。
 - 取得経路：[Openverse](https://openverse.org/) で検索 → 各写真の Flickr 元ページでライセンス表記を確認 → ダウンロード。
-- 加工：すべて縮小し WebP に変換（幅480px／960px。元画像が小さいものは元サイズのまま）。表示時に CSS でトリミング（`object-fit: cover`）しています。
+- 加工：すべて縮小し WebP に変換（幅480px／960px。元画像が小さいものは元サイズのまま。ヒーロー写真のみ1024px版も用意）。表示時に CSS でトリミング（`object-fit: cover`）しています。
 - **確認日：2026-10-24**（すべての写真で、元ページのライセンス表記を同日に確認）
 - サイト上では、フッターの「写真のクレジット」に撮影者・元ページ・ライセンスへのリンクを表示しています（`src/data/photos.ts` から生成）。
 
@@ -22,7 +22,7 @@
 
 | 使用ファイル（`public/images/`） | 撮影者・制作者 | 元ページURL | ライセンス | 使用箇所 | 必要なクレジット表記 |
 | --- | --- | --- | --- | --- | --- |
-| `hero-brushcutter-crew-480.webp` / `-960.webp` | National Interagency Fire Center | https://www.flickr.com/photos/165415395@N07/52149861724 | Public Domain Mark 1.0 | トップ：最初の画面の写真、OGP画像 | 不要（任意で「Photo by National Interagency Fire Center」） |
+| `hero-brushcutter-crew-480.webp` / `-960.webp` / `-1024.webp` | National Interagency Fire Center | https://www.flickr.com/photos/165415395@N07/52149861724 | Public Domain Mark 1.0 | トップ：最初の画面の写真、OGP画像 | 不要（任意で「Photo by National Interagency Fire Center」） |
 | `kusakari-residence-480.webp` / `-960.webp` | jetalone | https://www.flickr.com/photos/92203585@N00/15434372981 | CC BY 2.0 | トップ：草刈りの説明 | Photo by jetalone / CC BY 2.0（縮小・トリミングあり） |
 | `kusakari-trimmer-480.webp` / `-960.webp` | sacks08 | https://www.flickr.com/photos/29071316@N06/5280723099 | CC BY 2.0 | トップ：草刈りの説明 | Photo by sacks08 / CC BY 2.0（縮小・トリミングあり） |
 | `kusatori-hand-480.webp` / `-960.webp` | USFWS Mountain Prairie | https://www.flickr.com/photos/51986662@N05/23160907112 | CC BY 2.0 | トップ：草取りの説明 | Photo by USFWS Mountain Prairie / CC BY 2.0（縮小・トリミングあり） |

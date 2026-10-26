@@ -7,21 +7,27 @@
 <header class="site-header">
   <div class="container site-header__bar">
     <a class="logo" href="/">
-      <span class="logo__sub">草刈り・草取り・伐採</span>
-      <span class="logo__name">緑整<small>りょくせい</small></span>
+      <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#20533B"/><path d="M9 23c0-7 4-12 14-15-2 9-6 14-14 15z" fill="#9CCC65"/><path d="M9 23l7-7" stroke="#20533B" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__sub">草刈り・草取り・伐採</span>
+        <span class="logo__name">緑整<small>りょくせい</small></span>
+      </span>
     </a>
     <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span data-icon="list"></span><span>メニュー</span></button>
     <nav id="site-nav" class="site-nav" aria-label="サイト内">
       <ul>
-        <li><a href="/#trouble">困りごとから選ぶ</a></li>
+        <li><a href="/#trouble">お困りごと</a></li>
         <li><a href="/#services">作業内容</a></li>
-        <li><a href="/#price">費用の目安</a></li>
-        <li><a href="/#photo">写真相談</a></li>
+        <li><a href="/#price">料金</a></li>
+        <li><a href="/#cases">相談例</a></li>
         <li><a href="/#flow">流れ</a></li>
         <li><a href="/#area">対応エリア</a></li>
         <li><a href="/#faq">よくある質問</a></li>
       </ul>
     </nav>
-    <a class="btn btn--primary btn--small header-cta" href="/estimate"><span data-icon="camera"></span>写真で見積もり相談</a>
+    <div class="header-actions">
+      <button class="btn btn--small header-tel" type="button" data-demo-link="phone"><span data-icon="phone"></span>000-0000-0000</button>
+      <a class="btn btn--primary btn--small" href="/estimate"><span data-icon="camera"></span>写真で相談</a>
+    </div>
   </div>
 </header>

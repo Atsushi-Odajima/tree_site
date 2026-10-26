@@ -1,7 +1,7 @@
 import { defineConfig, type Plugin, type Connect } from 'vite';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { renderPriceRows, renderServices } from './src/render/static-html.ts';
+import { renderAddonRows, renderCalcExample, renderPriceRows, renderServiceCards, renderServices } from './src/render/static-html.ts';
 
 const root = __dirname;
 
@@ -29,6 +29,9 @@ function htmlPartials(): Plugin {
           )
           .replace('<div class="services" data-services></div>', `<div class="services" data-services>${renderServices()}</div>`)
           .replace(/<tbody data-price-rows>[\s\S]*?<\/tbody>/, `<tbody data-price-rows>${renderPriceRows()}</tbody>`)
+          .replace('<ul class="svc-cards" data-service-cards></ul>', `<ul class="svc-cards" data-service-cards>${renderServiceCards()}</ul>`)
+          .replace('<tbody data-addon-rows></tbody>', `<tbody data-addon-rows>${renderAddonRows()}</tbody>`)
+          .replace('<div class="calc" data-calc-example></div>', `<div class="calc" data-calc-example>${renderCalcExample()}</div>`)
           .replace(/<span data-icon="([\w-]+)"><\/span>/g, (_, name: string) => inlineIcon(name));
       },
     },

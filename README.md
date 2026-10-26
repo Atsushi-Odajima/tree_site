@@ -6,6 +6,7 @@
 - 対象業務：草刈り／草取り／伐採（草や枝の集積・作業後の清掃は付随項目、処分は要相談）
 - 構成：「困りごとを選ぶ → 作業内容を理解する → 費用の条件を確認する → 写真で相談する」
 - 仕様・方針の詳細は [`CLAUDE.md`](./CLAUDE.md)、素材の出典は [`CREDITS.md`](./CREDITS.md)
+- デザインは、指定の参考サイト（https://bassai-kurashiya.com/）の構成・見せ方を参考にしています（文章・写真・評価・実績などはコピーしていません。詳細は CLAUDE.md の「デザイン（参考構成）」）
 
 ## ページ
 
@@ -36,18 +37,19 @@ node scripts/e2e-check.cjs http://localhost:4173 ./screenshots
 
 84項目の必須確認（対象業務の限定、計算、引き継ぎ、希望日、写真、二重登録防止、保存失敗、直接アクセス、各画面幅、文字拡大、キーボード操作など）を自動で確認し、スクリーンショットを保存します。
 
-## 公開（Cloudflare Pages）
+## 公開（Vercel）
 
 | 設定 | 値 |
 | --- | --- |
-| Framework preset | なし（None） |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Node.js | 環境変数 `NODE_VERSION=22` |
+| Framework Preset | Other（`vercel.json` で指定） |
+| Install Command | `npm ci` |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Node.js | 22.x |
 
-- `/estimate`・`/admin` は `dist/estimate/index.html`・`dist/admin/index.html` として出力されるため、直接開いても再読み込みしても表示されます（SPA用のリダイレクト設定は不要）。
-- 公開デモは検索エンジンに載せないよう、各ページの `<meta name="robots" content="noindex, nofollow">`、`public/_headers` の `X-Robots-Tag`、`public/robots.txt` を設定しています。
-- OGP画像は相対パスです。公開URLが決まったら `partials/head-common.html` の `og:image` を絶対URLに変更してください。
+- 設定は `vercel.json` にまとめています。`/estimate`・`/admin` は rewrite で `estimate/index.html`・`admin/index.html` を返すため、直接開いても再読み込みしても表示されます。
+- 公開デモは検索エンジンに載せないよう、各ページの `<meta name="robots" content="noindex, nofollow">`、`vercel.json` の `X-Robots-Tag` ヘッダー、`public/robots.txt` を設定しています。
+- OGP画像は相対パスです。本番のドメインが決まったら `partials/head-common.html` の `og:image` を絶対URLに変更してください。
 
 ## デモパスワード
 
@@ -94,10 +96,10 @@ node scripts/e2e-check.cjs http://localhost:4173 ./screenshots
 9. **事業者情報**：屋号、所在地、電話番号、対応エリア、営業日（5〜9月の日曜対応など）、資格・保険・所有機械の記載（確認できたものだけ）。
 10. **外部リンク**：LINE公式アカウント・くらしのマーケット・Instagram・X の実URL（現在はデモ案内ダイアログ）。電話は `tel:` リンクに変更。
 11. **写真**：素材写真を事業者自身の作業写真に差し替える場合は、写っている人・敷地の掲載許可を確認。ビフォー・アフターは同じ現場の写真で、施主の許可がある場合のみ。
-12. **SEO**：noindex の解除（meta、`_headers`、`robots.txt`）、タイトル・説明文から「制作見本」を外す、実在の情報で LocalBusiness 構造化データを出力、地図の設置。
+12. **SEO**：noindex の解除（meta、`vercel.json` の `X-Robots-Tag`、`robots.txt`）、タイトル・説明文から「制作見本」を外す、実在の情報で LocalBusiness 構造化データを出力、地図の設置。
 13. **デモ表示の削除**：上部・フッターの「制作見本」表記、フォームのデモ注意文、サンプル入力ボタン。
 
-## 確認結果（2026-10-24）
+## 確認結果（2026-10-26・参考サイトに合わせたデザイン変更後）
 
 - 単体テスト：18件すべて成功（`npm test`）
 - 動作確認：84項目すべて成功（`scripts/e2e-check.cjs`、Chromium 153 headless、375／390／768／1440px）
@@ -105,17 +107,17 @@ node scripts/e2e-check.cjs http://localhost:4173 ./screenshots
 
 | ページ | Performance | Accessibility | Best Practices | SEO |
 | --- | --- | --- | --- | --- |
-| `/` | 100 | 100 | 100 | 58 |
-| `/estimate` | 100 | 100 | 100 | 54 |
-| `/admin` | 100 | 100 | 100 | 54 |
+| `/` | 99 | 100 | 100 | 66 |
+| `/estimate` | 100 | 100 | 100 | 63 |
+| `/admin` | 100（変更前の計測） | 100 | 100 | 54 |
 
-SEO の減点は、公開デモ用に意図して設定した `noindex`（is-crawlable）によるものです。ローカル計測のため、Cloudflare Pages 上の実測値とは異なる可能性があります。
+SEO の減点は、公開デモ用に意図して設定した `noindex`（is-crawlable）によるものです。ローカル計測のため、Vercel 上の実測値とは異なる可能性があります。
 
 ## ディレクトリ構成
 
 ```
 index.html, estimate/index.html, admin/index.html   各ページ
-partials/          共通の head・ヘッダー・フッター（vite.config.ts で差し込み）
+partials/          共通の head・ヘッダー・フッター・相談ボタン（vite.config.ts で差し込み）
 src/data/          事業者・サービス・料金・営業日・写真の共通データ
 src/lib/           計算（estimate.ts）・面積換算（area.ts）・保存（storage.ts）
 src/render/        ビルド時に静的HTMLを生成（サービス説明・料金表）
